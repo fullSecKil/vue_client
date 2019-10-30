@@ -36,4 +36,14 @@ public class AjaxResponse {
         resultBean.setData(data);
         return resultBean;
     }
+
+    public static AjaxResponse failde(Object data) {
+        AjaxResponse resultBean = new AjaxResponse();
+        resultBean.setIsok(false);
+        resultBean.setCode(400);
+        resultBean.setMessage("failde");
+        resultBean.setData(data);
+        return resultBean;
+    }
+
 }

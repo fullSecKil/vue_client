@@ -23,16 +23,17 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean isExist(String name) {
-        return Optional.ofNullable(getByName(name)).isPresent();
+        return getByName(name).isPresent();
     }
 
     @Override
-    public User getByName(String name) {
-        return userMapper.selectOne(Wrappers.<User>lambdaQuery().like(User::getUsername, name));
+    public Optional<User> getByName(String name) {
+        return Optional.ofNullable(userMapper.selectOne(Wrappers.<User>lambdaQuery().like(User::getUsername, name)));
     }
 
-    public User get(String userName, String password) {
-        return userMapper.selectOne(Wrappers.<User>lambdaQuery()
-                .and(o -> o.eq(User::getUsername, userName).eq(User::getPassword, password)));
+    @Override
+    public Optional<User> get(String userName, String password) {
+        return Optional.ofNullable(userMapper.selectOne(Wrappers.<User>lambdaQuery()
+                .and(o -> o.eq(User::getUsername, userName).eq(User::getPassword, password))));
     }
 }

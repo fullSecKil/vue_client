@@ -2,6 +2,8 @@ package com.indepth.restfulapi.service;
 
 import com.indepth.restfulapi.pojo.User;
 
+import java.util.Optional;
+
 /**
  * UserService
  *
@@ -11,5 +13,7 @@ import com.indepth.restfulapi.pojo.User;
 public interface UserService {
     boolean isExist(String name);
 
-    User getByName(String name);
+    Optional<User> getByName(String name);
+
+    Optional<User> get(String userName, String password);
 }
