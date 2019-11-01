@@ -1,0 +1,10 @@
+server:
+  port: 8808
+  ssl:
+    key-store: classpath:keystore.jks
+    key-store-password: 199705
+    key-password: 199705
+    protocol: TLSv1.2
+  http2:
+    enabled: true
+  use-forward-headers: true
