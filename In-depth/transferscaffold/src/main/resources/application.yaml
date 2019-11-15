@@ -1,0 +1,25 @@
+transfer:
+  task-batch:
+    path-map: {oml: 'D:/webservicefiles/yzjgkgz8/start.bat', sgb: 'D:/webservicefiles/yzjgkgz8/start.bat'}
+
+spring:
+  datasource:
+    oml:
+      url: jdbc:oracle:thin:@//10.11.2.61:1521/orcl
+      username: kerry
+      password: 123456
+      driverClassName: oracle.jdbc.driver.OracleDriver
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+    sgb:
+      url: jdbc:oracle:thin:@//10.11.2.61:1521/orcl
+      username: kerry
+      password: 123456
+      driverClassName: oracle.jdbc.driver.OracleDriver
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+    my-sql:
+      jdbc-url: jdbc:mysql://47.98.186.6:3306/testdatabase?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+      jdbcUrl: jdbc:mysql://47.98.186.6:3306/testdatabase?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+      username: root
+      password: VisT2iiLc
+      # driver-class-name: com.mysql.cj.jdbc.Drivers
+      driverClassName: com.mysql.cj.jdbc.Driver
